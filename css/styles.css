@@ -1,0 +1,188 @@
+*, *::before, *::after {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+}
+
+main {
+  width: 75%;
+  margin: 2rem auto;
+  min-height: 90vh;
+}
+
+#profile-picture {
+  float: right;
+  width: 30%;
+}
+
+/* temp: replicating Tailwind */
+.sticky {
+  position: sticky;
+}
+.top-0 {
+  top: 0;
+}
+
+.bg-gray-900 {
+  background: lightblue;
+}
+
+.text-white {
+  color: white;
+}
+
+.flex {
+  display: flex;
+}
+
+.justify-center {
+  justify-content: center;
+}
+
+.place-content-center {
+  place-content: center;
+}
+
+.mb-4 {
+  margin-bottom: 1rem;
+}
+
+.mt-4 {
+  margin-top: 1rem;
+}
+
+.mb-16 {
+  margin-bottom: 4rem;
+}
+
+.ml-6 {
+  margin-left: 1.5rem;
+}
+
+.mb-6 {
+  margin-bottom: 1.5rem;
+}
+
+.italic {
+  font-style: italic;
+}
+
+.underline {
+  text-decoration: underline;
+}
+
+.pt-8 {
+  padding-top: 2rem;
+}
+
+.pb-2 {
+  padding-bottom: 0.5rem;
+}
+
+.mx-auto {
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.flex-wrap {
+  flex-wrap: wrap;
+}
+
+.gap-x-8 {
+  gap: 8px;
+}
+
+.h-16 {
+  height: 4rem;
+}
+
+.py-2 {
+  padding-top: 0.5rem;
+  padding-bottom: 0.5rem;
+}
+
+.mb-20 {
+  margin-bottom: 5rem;
+}
+
+.grid {
+  display: grid;
+}
+
+.gap-2 {
+  gap: 2px;
+}
+
+.grid-cols-4 {
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+}
+
+.text-center {
+  text-align: center;
+}
+
+.m-2 {
+  margin: 0.5rem;
+}
+
+#hobbies-page img {
+  max-width: 100%;
+}
+
+.w-half {
+  width: 50%;
+}
+
+.h-80 {
+  height: 20rem;
+}
+
+.object-cover {
+  object-fit: cover;
+}
+
+.w-full {
+  width: 100%;
+}
+
+h1, h2 {
+  margin: 0;
+  padding: 0;
+}
+
+.font-semibold {
+	font-weight: 600;
+}
+
+.text-xl {
+  font-size: 1.25rem;
+  line-height: 1.75rem;
+}
+
+.text-4xl {
+  font-size: 2.25rem;
+  line-height: 2.5rem;
+}
+
+/*
+  xs: 320px — 480px: Mobile devices.
+  sm: 481px — 768px: iPads, Tablets.
+  md: 769px — 1024px: Small screens, laptops.
+  lg: 1025px — 1200px: Desktops, large screens.
+  xl: 1201px and more — Extra large screens, TV.
+*/
+.hidden {
+  display: none;
+}
+.md-flex {
+  display: none;
+}
+@media (min-width: 769px) {
+  .md-flex {
+   display: flex;
+  }
+
+
+}

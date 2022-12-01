@@ -4,12 +4,91 @@
     <meta charset="UTF-8" />
     <!-- <link rel="icon" type="image/svg+xml" href="/vite.svg" /> -->
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Melodie Jin</title>
-    <script type="module" crossorigin src="/assets/index.a8ccc3a6.js"></script>
-    <link rel="stylesheet" href="/assets/index.9e6b4bdf.css">
+    <title>Melodie Jin: Home</title>
+
+    <link rel="stylesheet" href="/css/styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto" rel="stylesheet">
   </head>
   <body>
-    <div id="app" class="text-gray-900 font-sans"></div>
-    
+    <header class="sticky top-0 bg-gray-900 text-white flex justify-center pt-8 pb-2">
+      <!-- <a id="skip-nav" href="#main-content">Skip to Content</a> -->
+      <!-- <div class="contents md:hidden">
+        <MenuIcon/>
+      </div> -->
+
+      <!-- <nav class="hidden md:flex mx-auto flex-wrap gap-x-8"> -->
+        <nav class="flex mx-auto flex-wrap gap-x-8">
+        <a href="/">HOME</a>
+        <a href="/experiences">EXPERIENCES</a>
+        <a href="/blog">BLOG</a>
+        <a href="/hobbies">HOBBIES</a>
+        <!-- <a class="hover:underline hover:underline-offset-4" to="/contact">CONTACT ME</a> -->
+      </nav>
+    </header>
+
+    <main class="min-h-screen -mb-16">
+
+      <section id="overview" class="mx-auto max-w-4xl w-4/5 mb-16 mt-4">
+        <img id="profile-picture" src="/assets/blue-pfp.jpeg" alt="picture of me, Melodie" class="w-1/3 float-right ml-6 mb-6"/>
+        <h1 class="text-4xl font-semibold my-8">
+          Hey, there! I'm Melodie
+        </h1>
+        <p class="mb-4">
+          ... and I am a fourth year undergraduate student at the University of
+          Michigan in Ann Arbor, USA majoring in Computer Science. I want to
+          become a software/web developer that creates tools and spaces that are
+          accessible to a diverse user base and empowering them to achieve their
+          goals.
+        </p>
+        <p class="mb-4">
+          At Umich, I have taken a range of classes, such as
+          <span class="italic">Data Structures & Algorithms</span>,
+          <span class="italic">Introduction to Machine Learning</span>,
+          <span class="italic">Web Systems</span>,
+          <span class="italic">Database Management Systems</span>, and
+          <span class="italic">Software Engineering</span>.
+          And I have had the opportunity to apply and further develop my skills through
+          internships, including one at an early startup and another in consulting services.
+        </p>
+        <p class="mb-4">
+          When I am not working or studying, I enjoy playing video games (recently
+          Genshin Impact and Arknights), as well as making and eating sweets.
+        </p>
+      </section>
+
+      <section id="section1-work" class="mx-auto max-w-4xl w-4/5 mt-4 grid">
+        <h2 class="text-2xl font-semibold mb-4">
+          About this site
+        </h2>
+        <div class="">
+          <div>
+            <p class="mb-4">
+              This website is still early in development and thus a little empty at the moment.
+            </p>
+            <p>
+              For those that may be curious, I created these web pages using:
+            </p>
+            <ul class="ml-8 list-inside">
+              <li class="list-disc my-1">Vue: as the Javascript framework for making a declarative front end</li>
+              <li class="list-disc my-1">Vite: for build the source code (and better developer experience)</li>
+              <li class="list-disc my-1">Tailwind for CSS utility classes and components</li>
+            </ul>
+            <a href="https://github.com/melodiexj/personal-website" class="underline">
+              See the full source code for this website on GitHub
+            </a>
+          </div>
+        </div>
+      </section>
+
+    </main>
+
+    <footer class="w-full h-16 mx-auto py-2 text-center bg-gray-900 text-white flex flex-wrap place-content-center gap-x-2">
+      <a href="https://www.linkedin.com/in/melodiejin/" class="hover:underline hover:underline-offset-4">LinkedIn</a>
+      |
+      <a href="https://github.com/melodiexj" class="hover:underline hover:underline-offset-4">GitHub</a>
+      |
+      <span>melodiej@umich.edu</span>
+    </footer>
+
   </body>
 </html>

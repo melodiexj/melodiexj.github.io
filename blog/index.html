@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <!-- <link rel="icon" type="image/svg+xml" href="/vite.svg" /> -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Melodie Jin: Home</title>
+    <link rel="stylesheet" href="/css/styles.css">
+  </head>
+  <body>
+    <header class="sticky top-0 bg-gray-900 text-white flex justify-center pt-8 pb-2">
+      <!-- <a id="skip-nav" href="#main-content">Skip to Content</a> -->
+      <!-- <div class="contents md:hidden">
+        <MenuIcon/>
+      </div> -->
+
+      <!-- <nav class="hidden md:flex mx-auto flex-wrap gap-x-8"> -->
+      <nav class="flex mx-auto flex-wrap gap-x-8">
+        <a href="/">HOME</a>
+        <a href="/experiences">EXPERIENCES</a>
+        <a href="/blog">BLOG</a>
+        <a href="/hobbies">HOBBIES</a>
+        <!-- <a class="hover:underline hover:underline-offset-4" to="/contact">CONTACT ME</a> -->
+      </nav>
+    </header>
+
+    <main class="min-h-screen -mb-16">
+      A Beginner-Friendly Introduction to NodeJS
+
+      Tags: web-dev, tech, introduction
+      Series: for beginners
+
+
+          When I began my journey in web development, I was eager to dive right in. And given the current state of the web and the fast rate of change in tech, there was no lack of introductory material on topics and technology of interest.
+      It wasn’t long before I encountered my first NodeJS project. And once you start working with modern web development tools and technology, you quickly realize: NodeJS is everywhere. And the reason that Node (also known as “Node.js” or simply “Node”) is everywhere is that it is an incredibly powerful and foundational tool. Unfortunately, as a ubiquitous foundation, I think it is easy for new developers to overlook Node, to the detriment of their learning and ability to set up and work on their own new projects. That is certainly what happened to me: a year after my first dip into web development, I was asked to explain what Node was to a non-web-developer friend and I had difficulty articulating what Node was.
+      This piece is intended to be a very beginner-friendly introduction to Node and how it fits into the current web development tool ecosystem. This piece will NOT have any tutorials on using Node: its use cases are wide and I want to focus on Node at a high level.
+
+      Breaking down “Node.js: a JavaScript Runtime Environment”
+
+      In the early days of the web, all web content was static content; that is, every time you load a page, you can expect to see the exact same content. Today, we are no longer limited to that one option and have seen the rise of recommendation algorithms and personalized views that are dynamic and generated in real-time. This is all possible because of JavaScript: given some data and a program (ie. a set of instructions), we can make a machine choose what content to show in real-time for us.
+      However, as a programming language, JavaScript is not directly understood by a machine; it must go through a kind of translation step from human-readable programming language to machine-readable binary. Sometimes this translation is handled by a web browser – Google Chrome, Mozilla Firefox, Microsoft Edge, etc – which almost certainly has a built-in JavaScript engine for the translation and execution of JavaScript.
+      In many cases, this is a decent arrangement. One of the main functions of modern web browsers is to display web content, so it makes sense to make the web browser generate the web content.
+      But this is not always the best arrangement. What if, as one basic example, we have a user viewing a web page on an older computer with limited computing power? By giving the web browser the burden of both generating the web content and displaying it, we strain the machine that the web browser is on.
+      One solution to this concern is to move the process of generating web content elsewhere. (The user still views the web content through the web browser, so it is still the browser’s job to display the final result.) However, without the web browser, we are now missing the engine that translates and executes JavaScript code. This is where NodeJS comes in.
+      NodeJS is a JavaScript runtime environment, in other words, it can run/execute JavaScript independently of any web browser. It does this by using V8, the same JavaScript engine as the Google Chrome web browser (but again, V8 and Google Chrome are not the same thing).
+      As an aside, the decision to generate the web content on the web browser (often referred to as the “client” since the browser is the interface representing the human user) or in a separate process/server revolves around the concepts of client-side vs server-side rendering. While reducing the computational burden of the client is one benefit that server-side rendering has over client-side rendering, there are other benefits, and each come with potential trade-offs.
+      For a more detailed explanation of client-side vs server-side rendering, see this post from CloudFlare. https://www.cloudflare.com/learning/serverless/glossary/client-side-vs-server-side/
+
+      NODEJS TODAY
+
+          Today, Node is often used to build web servers, which store and serve the resources that a web browser needs to render web content, including the logic that handles more complex user interactions.
+          However, Node is not the only option when it comes to web servers – other common examples including Apache and Nginx – nor can it only be used to build web servers. Any time you want to run a JavaScript program without a browser, Node can be used. Furthermore, Node’s package manager, npm, has new packages added to its repository everyday by developers all over the world. A package is basically a piece of shared code, so npm enables developers to build their projects and tools more efficiently and cumulatively more complex by borrowing the work of others.
+      This kind of collaboration is part of modern open-source contribution culture and is a big reason for Node’s current popularity.
+
+      CONCLUSION
+
+      Broadly, Node fulfills the need to run JavaScript outside of a browser, however it can be much more than just a runtime environment thanks to the open collaboration and sharing of code between developers through npm. In this piece, I have only barely scratched the surface of what Node can do, but I hope this has helped clarify where Node fits into the web development process and ecosystem. With this anchor, I would highly recommend new developers to explore some of the concepts/standards that were briefly touched on, such as client-side rendering vs server-side rendering, how web servers built on Node compare to others, npm, open-source culture, etc.
+      Happy developing!
+
+
+
+    </main>
+
+    <footer class="w-full h-16 mx-auto py-2 text-center bg-gray-900 text-white flex flex-wrap place-content-center gap-x-2">
+      <a href="https://www.linkedin.com/in/melodiejin/" class="hover:underline hover:underline-offset-4">LinkedIn</a>
+      |
+      <a href="https://github.com/melodiexj" class="hover:underline hover:underline-offset-4">GitHub</a>
+      |
+      <span>melodiej@umich.edu</span>
+    </footer>
+
+  </body>
+</html>
