@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Melodie Jin</title>
+  <link rel="stylesheet" href="/css/style.css">
+</head>
+
+<body id="app" class="text-gray-900 font-sans">
+<header class="sticky top-0 bg-gray-900 text-white pt-8 pb-2 min-h-16">
+  <nav id="nav-bar" class="mx-auto w-4/5 gap-x-8 flex flex-wrap flex-col md:flex-row md:justify-center">
+
+    <script>
+      function toggleMiniNavBar() {
+        document.getElementById("nav-bar").classList.toggle("nav-open");
+      }
+    </script>
+
+    <!-- use Menu icon from Material UI as button -->
+    <button id="nav-bar-btn" class="hover:cursor-pointer contents md:hidden material-design-icon menu-icon" role="button" onclick="toggleMiniNavBar()">
+      <svg class="material-design-icon__svg" fill="currentColor" width="24" height="24" viewBox="0 0 24 24">
+        <path d="M3,6H21V8H3V6M3,11H21V13H3V11M3,16H21V18H3V16Z"></path>
+      </svg>
+    </button>
+
+    <ul class="hidden md:contents">
+      <li><a href="/index.html" class="hover:underline hover:underline-offset-4">HOME</a></li>
+      <li><a href="/experiences.html" class="hover:underline hover:underline-offset-4">EXPERIENCES</a></li>
+      <li><a href="/blog.html" class="hover:underline hover:underline-offset-4">BLOG</a></li>
+      <li><a href="/hobbies.html" class="hover:underline hover:underline-offset-4">HOBBIES</a></li>
+    </ul>
+  </nav>
+</header>
+
+<main class="min-h-screen -mb-16">
+  <div class="mx-auto w-4/5 max-w-4xl">
+    <section class="mb-16 text-center">
+      <h1 class="text-4xl font-semibold my-8">A Beginner-Friendly Introduction to NodeJS</h1>
+      <p class="text-sm italic">Tags: web-dev, tech, introduction</p>
+      <p class="text-sm italic">Series: 'For Beginners'</p>
+    </section>
+    <article class="leading-loose">
+      <p class="indent-8 mb-6">
+        When I began my journey in web development, I was eager to dive right in. And given the current state of the web and the fast rate of change in tech, there was no lack of introductory material on topics and technology of interest.
+      </p>
+      <p class="indent-8 mb-6">
+        It wasn't long before I encountered my first NodeJS project. And once you start working with modern web development tools and technology, you quickly realize: NodeJS is everywhere. And the reason that Node (also known as “Node.js” or simply “Node”) is everywhere is that it is an incredibly powerful and foundational tool. Unfortunately, as a ubiquitous foundation, I think it is easy for new developers to overlook Node, to their detriment. That is certainly what happened to me: a year after my first dip into web development, I was asked to explain what Node was to a non-web-developer friend and I had difficulty articulating what Node was.
+      </p>
+      <p class="indent-8 mb-6">
+        This piece is intended to be a very beginner-friendly introduction to Node and how it fits into the current web development tool ecosystem. This piece will NOT have any tutorials on using Node: its use cases are wide and I want to focus on Node at a high level.
+      </p>
+      <h2 class="text-xl font-semibold mb-6 text-center">
+        Breaking down “Node.js: a JavaScript Runtime Environment”
+      </h2>
+      <p class="indent-8 mb-6">
+        In the early days of the web, all web content was static content; that is, every time you load a page, you can expect to see the exact same content. Today, we are no longer limited to that one option and have seen the rise of recommendation algorithms and personalized views that are dynamic and generated in real-time. This is all possible because of JavaScript: given some data and a program (ie. a set of instructions), we can make a machine choose what content to show in real-time for us.
+      </p>
+      <p class="indent-8 mb-6">
+        However, as a programming language, JavaScript is not directly understood by a machine; it must go through a kind of translation step from human-readable programming language to machine-readable binary. Sometimes this translation is handled by a web browser - Google Chrome, Mozilla Firefox, Microsoft Edge, etc - which almost certainly has a built-in JavaScript engine for the translation and execution of JavaScript.
+      </p>
+      <p class="indent-8 mb-6">
+        In many cases, this is a decent arrangement. One of the main functions of modern web browsers is to display web content, so it makes sense to make the web browser generate the web content. But this is not always the best arrangement. What if, as one basic example, we have a user viewing a web page on an older computer with limited computing power? By giving the web browser the burden of both generating the web content and displaying it, we strain the machine that the web browser is on.
+      </p>
+      <p class="indent-8 mb-6">
+        One solution to this concern is to move the process of generating web content elsewhere. (The user still views the web content through the web browser, so it is still the browser's job to display the final result.) However, without the web browser, we are now missing the engine that translates and executes JavaScript code. This is where NodeJS comes in.
+      </p>
+      <p class="indent-8 mb-6">
+        NodeJS is a JavaScript runtime environment, in other words, it can run/execute JavaScript independently of any web browser. It does this by using V8, the same JavaScript engine as the Google Chrome web browser (but again, V8 and Google Chrome are not the same thing).
+      </p>
+      <p class="indent-8 mb-6">
+        (As an aside, the decision to generate the web content on the web browser (often referred to as the “client” since the browser is the interface representing the human user) or in a separate process/server revolves around the concepts of client-side vs server-side rendering. While reducing the computational burden of the client is one benefit that server-side rendering has over client-side rendering, there are other benefits, and each come with potential trade-offs. For a more detailed explanation of client-side vs server-side rendering, see <a class="underline text-blue-700" href="https://www.cloudflare.com/learning/serverless/glossary/client-side-vs-server-side/" target="_blank">this post from CloudFlare</a>.)
+      </p>
+
+      <h2 class="text-xl font-semibold mb-6 text-center">
+        Node.js Today
+      </h2>
+      <p class="indent-8 mb-6">
+        Today, Node is often used to build web servers, which store and serve the resources that a web browser needs to render web content, including the logic that handles more complex user interactions.
+      </p>
+      <p class="indent-8 mb-6">
+        However, Node is not the only option when it comes to web servers - other common examples including Apache and Nginx - nor can it only be used to build web servers. Any time you want to run a JavaScript program without a browser, Node can be used. Furthermore, Node's package manager, npm, has new packages added to its repository everyday by developers all over the world. A package is basically a piece of shared code, so npm enables developers to build their projects and tools more efficiently and cumulatively more complex by borrowing the work of others.
+      </p>
+      <p class="indent-8 mb-6">
+        This kind of collaboration is part of modern open-source contribution culture and is a big reason for Node's current popularity.
+      </p>
+
+      <h2 class="text-xl font-semibold mb-6 text-center">
+        Conclusion
+      </h2>
+      <p class="indent-8 mb-6">
+        Broadly, Node fulfills the need to run JavaScript outside of a browser, however it can be much more than just a runtime environment thanks to the open collaboration and sharing of code between developers through npm. In this piece, I have only barely scratched the surface of what Node can do, but I hope this has helped clarify where Node fits into the web development process and ecosystem.
+      </p>
+      <p class="indent-8 mb-6">
+        With this anchor, I would highly recommend new developers to explore some of the concepts/standards that were briefly touched on, such as client-side rendering vs server-side rendering, how web servers built on Node compare to others, npm, open-source culture, etc.
+      </p>
+      <p class="mb-36 text-center font-semibold">
+        Happy developing!
+      </p>
+    </article>
+  </div>
+</main>
+
+<footer>
+  <ul class="w-full h-16 mx-auto py-2 text-center bg-gray-900 text-white flex flex-wrap place-content-center gap-x-2">
+    <li><a href="https://www.linkedin.com/in/melodiejin/" class="hover:underline hover:underline-offset-4">LinkedIn</a></li>
+    <li><a href="https://github.com/melodiexj" class="hover:underline hover:underline-offset-4">GitHub</a></li>
+    <li><span class="hover:underline hover:underline-offset-4">melodiej@umich.edu</a></li>
+  </ul>
+</footer>
+</body>
+</html>

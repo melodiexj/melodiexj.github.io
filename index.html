@@ -4,36 +4,58 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Melodie Jin</title>
-  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="/css/style.css">
 </head>
-<body id="app" class="text-gray-900 font-sans">
-  <header class="sticky top-0 bg-gray-900 text-white pt-8 pb-2 h-16">
-    <!-- TODO -->
-  </header>
-  <main class="min-h-screen -mb-16">
-    <section id="overview" class="mx-auto max-w-4xl w-4/5 mb-16 mt-4">
-      <img class="w-1/3 float-right ml-6 mb-6" src="pfp-melodie.jpeg" alt="picture of me, Melodie">
 
-      <h1 class="text-4xl font-semibold my-8">
-        Hey there! I'm Melodie
-      </h1>
-      <p class="mb-4">
-        I am a fourth year undergraduate student at the University of Michigan in Ann Arbor, USA majoring in Computer Science. I want to become a web developer that creates tools and spaces that are accessible to a diverse user base and empowering them to achieve their goals.
-      </p>
-      <p class="mb-4">
-        At Umich, I have taken a range of classes, such as <span class="italic">Data Structures & Algorithms</span>, <span class="italic">Introduction to Machine Learning</span>, <span class="italic">Web Systems</span>, <span class="italic">Database Management Sytems</span>, and <span class="italic">Software Engineering</span>. And I have had the opportunity to apply and further develop my skills through internships, including one at an early startup and another in consulting services.
-      </p>
-      <p class="mb-4">
-        When I am not working or studying, I enjoy baking sweets and playing video games (recently Genshin Impact and Arknights).
-      </p>
-    </section>
-  </main>
-  <footer>
-    <ul class="w-full h-16 mx-auto py-2 text-center bg-gray-900 text-white flex flex-wrap place-content-center gap-x-2">
-      <li><a href="https://www.linkedin.com/in/melodiejin/"class="hover:underline hover:underline-offset-4">LinkedIn</a></li>
-      <li><a href="https://github.com/melodiexj"class="hover:underline hover:underline-offset-4">GitHub</a></li>
-      <li><span class="hover:underline hover:underline-offset-4">melodiej@umich.edu</a></li>
+<body id="app" class="text-gray-900 font-sans">
+<header class="sticky top-0 bg-gray-900 text-white pt-8 pb-2 min-h-16">
+  <nav id="nav-bar" class="mx-auto w-4/5 gap-x-8 flex flex-wrap flex-col md:flex-row md:justify-center">
+
+    <script>
+      function toggleMiniNavBar() {
+        document.getElementById("nav-bar").classList.toggle("nav-open");
+      }
+    </script>
+
+    <!-- use Menu icon from Material UI as button -->
+    <button id="nav-bar-btn" class="hover:cursor-pointer contents md:hidden material-design-icon menu-icon" role="button" onclick="toggleMiniNavBar()">
+      <svg class="material-design-icon__svg" fill="currentColor" width="24" height="24" viewBox="0 0 24 24">
+        <path d="M3,6H21V8H3V6M3,11H21V13H3V11M3,16H21V18H3V16Z"></path>
+      </svg>
+    </button>
+
+    <ul class="hidden md:contents">
+      <li><a href="/index.html" class="underline underline-offset-4">HOME</a></li>
+      <li><a href="/experiences.html" class="hover:underline hover:underline-offset-4">EXPERIENCES</a></li>
+      <li><a href="/blog.html" class="hover:underline hover:underline-offset-4">BLOG</a></li>
+      <li><a href="/hobbies.html" class="hover:underline hover:underline-offset-4">HOBBIES</a></li>
     </ul>
-  </footer>
+  </nav>
+</header>
+<main class="min-h-screen -mb-16">
+  <section id="overview" class="mx-auto max-w-4xl w-4/5 mb-16 mt-4">
+    <img class="w-1/3 float-right ml-6 mb-6" src="img/pfp-melodie.jpeg" alt="picture of me, Melodie">
+
+    <h1 class="text-4xl font-semibold my-8">
+      Hey there! I'm Melodie
+    </h1>
+    <p class="mb-4">
+      I am a fourth year undergraduate student at the University of Michigan in Ann Arbor, USA majoring in Computer Science. I want to become a web developer that creates tools and spaces that are accessible to a diverse user base and empowering them to achieve their goals.
+    </p>
+    <p class="mb-4">
+      At Umich, I have taken a range of classes, such as <span class="italic">Data Structures & Algorithms</span>, <span class="italic">Introduction to Machine Learning</span>, <span class="italic">Web Systems</span>, <span class="italic">Database Management Sytems</span>, and <span class="italic">Software Engineering</span>. And I have had the opportunity to apply and further develop my skills through internships, including one at an early startup and another in consulting services.
+    </p>
+    <p class="mb-4">
+      When I am not working or studying, I enjoy baking sweets and playing video games (recently Genshin Impact and Arknights).
+    </p>
+  </section>
+</main>
+<footer>
+  <ul class="w-full h-16 mx-auto py-2 text-center bg-gray-900 text-white flex flex-wrap place-content-center gap-x-2">
+    <li><a href="https://www.linkedin.com/in/melodiejin/" class="hover:underline hover:underline-offset-4">LinkedIn</a></li>
+    <li><a href="https://github.com/melodiexj" class="hover:underline hover:underline-offset-4">GitHub</a></li>
+    <li><span class="hover:underline hover:underline-offset-4">melodiej@umich.edu</a></li>
+  </ul>
+</footer>
 </body>
 </html>
